@@ -79,7 +79,7 @@ module Jekyll
       # Remove .htaccess file from included files, so it wont show up on translations folders.
       self.include -= [".htaccess"]
       
-      languages.drop(1).each do |lang|
+      languages.each do |lang| # Removes drop on the languages array as we want the first item included as well
         
         # Language specific config/variables
         @dest                  = dest_org    + "/" + lang
